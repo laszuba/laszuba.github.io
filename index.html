@@ -1,38 +1,31 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Laszuba.github.io by laszuba</title>
+---
+layout: default
+title: Lee Szuba
+---
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Laszuba.github.io</h1>
-        <p></p>
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &mdash; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
 
+  <h1>Projects</h1>
 
-        <p class="view"><a href="https://github.com/laszuba">View My GitHub Profile</a></p>
+  <h2>Radio and RF</h2>
+  <ul class="posts">
+    <li><a href="{{ site.url }}/projects/software_radio.html">Software Radio:</a> Software-defined radio receiver for the shortwave band</li>
+    <li><a href="{{ site.url }}/projects/power_meter.html">RF Power Meter:</a> Simple logarithmic detector for RF debugging</li>
+    <li><a href="{{ site.url }}/projects/mini_whip.html">Mini Whip:</a> Small shortwave active antenna</li>
+  </ul>
 
-      </header>
-      <section>
-        <h3>
-<a name="lee-szuba" class="anchor" href="#lee-szuba"><span class="octicon octicon-link"></span></a>LEE SZUBA</h3>
+  <h2>Robotics</h2>
+  <ul class="posts">
+    <li><a href="{{ site.url }}/projects/first.html">FIRST:</a> Team 3590</li>
+    <li><a href="{{ site.url }}/projects/skills.html">Skills:</a> Ontario Skills robotics competition</li>
+    <li><a href="{{ site.url }}/projects/panther.html">Panther:</a> 500 g autonomous mini-sumo</li>
+    <li><a href="{{ site.url }}/projects/spacejunk.html">Spacejunk:</a> 3 kg autonomous and remote control sumo</li>
+  </ul>
 
-<p>To be completed.</p>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
-</html>
+</div>
