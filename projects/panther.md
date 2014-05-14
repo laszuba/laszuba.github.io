@@ -5,6 +5,8 @@ title: Panther
 
 # {{ page.title }}
 
+Panther was my first fully custom mini-sumo robot. It was based on the now defunct Parallax SX microcontroller, programmed in a mix of assembly and BASIC. Panther went through 3 major revisions.
+
 ## Panther V3
 
 ![Overview]({{ site.url }}/images/panther/panther3-full1.jpg)

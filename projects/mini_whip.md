@@ -5,9 +5,9 @@ title: Mini Whip Antenna
 
 # {{ page.title }}
 
-I currently have two different antennas for testing. A 20 m band dipole at home in Toronto, and an small, active [PA0RDT][miniwhip] mini-whip that travels to wherever I am currently living.
+I currently have two different antennas for testing. A 20 m band dipole at home in Toronto, and a small, active [PA0RDT][miniwhip] mini-whip that travels to wherever I am currently living.
 
-The mini-whip is an active antenna, originally designed for longwave and mediumwave reception, but that works well all the way up through the shortwave bands. Mine is built in a piece of PVC pipe. A couple part substitutions had to be made, as one of the transistors is a TO39 metal can device (2N5109) that is challenging to find. It was replaced by a SOT223 package device with similar, if not better performance.
+The mini-whip is an active antenna, originally designed for long wave and medium wave reception, but that works well all the way up through the shortwave bands. Mine is built in a piece of PVC pipe. A couple part substitutions had to be made, as one of the transistors is a TO39 metal can device (2N5109) that is challenging to find. It was replaced by a SOT223 package device with similar, if not better performance.
 
 ![Mini-whip in its plastic pipe]({{ site.url }}/images/antennas/mini-whip-full.jpg)
 

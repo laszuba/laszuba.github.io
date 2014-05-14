@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Skills
+title: Ontario Skills Robotics Competition
 ---
 
 # {{ page.title }}
