@@ -1,4 +1,9 @@
 /******************************************************/
+/* Some CSS borrowed from Tom Preston-Werner
+/* Everything else by Lee Szuba
+/******************************************************/
+
+/******************************************************/
 /* Colour Scheme
 /*
 /* Primary:     2618b1 372F85 120873 594cd8 7b72d8
@@ -53,9 +58,9 @@ a:hover {
   color: black;
 }
 
-a:visited {
+/*a:visited {
   color: #372F85;
-}
+}*/
 
 table {
   font-size: inherit;
@@ -100,9 +105,9 @@ ul.posts {
   color: black;
 }
 
-.site a:visited {
+/*.site a:visited {
   color: #372F85;
-}
+}*/
 
 .title {
   color: #120873;
