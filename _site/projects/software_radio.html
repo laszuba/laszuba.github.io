@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+
+
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
    <title>Software Defined Radio</title>
    <meta name="author" content="Lee Szuba" />
 
-   <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" />
-   <link rel="stylesheet" href="/stylesheets/default.css" type="text/css" media="screen, projection" />
+   <link rel="stylesheet" href="/stylesheets/default.css" type="text/css" media="screen" />
 
 </head>
 <body>
@@ -28,16 +30,6 @@
 
 <p>The end goal of the project is to integrate a 130 Msps ADC (LTC2208), FPGA (Altera Cyclone IV), and Raspberry Pi into an integrated radio receiver, running GNU radio. The FPGA will downsample the signal, create the waterfall display, and pipe the data to the Pi through 10/100 Ethernet. The Pi will present the pre-processed waterfall to the user, as well as demodulate a narrower band signal (probably around 2 MHz bandwidth). Keeping the demodulation in the Pi will allow huge amounts of flexibility, but will take a significant amount of processing power. The Pi cannot possibly be presented with the full 60 MHz baseband, so this is where the FPGA comes in. This is a fairly lofty goal, but I am very excited to work on it. I expect it to be quite ongoing.</p>
 
-<h2 id="first_version">First Version</h2>
-
-<p>The first version of the SDR is a general coverage receiver, covering 100 kHz - ~50 MHz, using a computer sound card to digitize the baseband. It was very exciting to see the first radio signals come through! First AM radio, then shortwave SSB voice, and then CW (Morse Code). Watching the waterfall display in HDSDR is mesmerizing, and it gives one a great deal of insight into the radio spectrum.</p>
-
-<p>It is built around a quadrature sampling mixer, using a 40XX analog switch, and LM324 op amp, built on proto-board. The clock source is a DE0 Nano FPGA development board, using the on board PLL.</p>
-
-<h3 id="problems_and_improvements">Problems and Improvements</h3>
-
-<p>On this version, the tuning frequency was hard coded, so the FPGA needs to be re-flashed to change the tuning. This was obviously less than ideal. Unfortunately, the performance left a lot to be desired as the noise performance of the op amp is very very poor. This version is just a proof of concept, to try and understand the hardware and how the sampling detector works. No real measurements were performed, as I did not have any of the required test equipment at the time. The hardware later failed, and I decided because of the poor performance it was not worth fixing. Work on an improved version began.</p>
-
 <h2 id="second_version">Second Version</h2>
 
 <p>The second version of the SDR is again built around a quadrature sampling detector, with a similar coverage, but using a higher performance op amp (LT6231) and analog switch (ADG712). Tuning is accomplished using a rotary encoder, which dynamically adjusts the Cyclone IV’s PLL.</p>
@@ -52,7 +44,7 @@
 
 <p>The first test was to inject a CW signal into the receiver. This checked basic functionality and distortion performance.</p>
 
-<h3 id="problems_and_improvements_2">Problems and Improvements</h3>
+<h3 id="problems_and_improvements">Problems and Improvements</h3>
 
 <h4 id="tuning">Tuning</h4>
 
@@ -67,6 +59,16 @@
 <p><img src="/images/software_radio/20m-bandpass.jpg" alt="20 m band bandpass filter" /></p>
 
 <p><img src="/images/software_radio/20m-bandpass-insertion-loss.png" alt="Filter response before tuning" /></p>
+
+<h2 id="first_version">First Version</h2>
+
+<p>The first version of the SDR is a general coverage receiver, covering 100 kHz - ~50 MHz, using a computer sound card to digitize the baseband. It was very exciting to see the first radio signals come through! First AM radio, then shortwave SSB voice, and then CW (Morse Code). Watching the waterfall display in HDSDR is mesmerizing, and it gives one a great deal of insight into the radio spectrum.</p>
+
+<p>It is built around a quadrature sampling mixer, using a 40XX analog switch, and LM324 op amp, built on proto-board. The clock source is a DE0 Nano FPGA development board, using the on board PLL.</p>
+
+<h3 id="problems_and_improvements_2">Problems and Improvements</h3>
+
+<p>On this version, the tuning frequency was hard coded, so the FPGA needs to be re-flashed to change the tuning. This was obviously less than ideal. Unfortunately, the performance left a lot to be desired as the noise performance of the op amp is very very poor. This version is just a proof of concept, to try and understand the hardware and how the sampling detector works. No real measurements were performed, as I did not have any of the required test equipment at the time. The hardware later failed, and I decided because of the poor performance it was not worth fixing. Work on an improved version began.</p>
 </div>
 
   <div class="footer">
