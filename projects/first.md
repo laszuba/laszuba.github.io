@@ -47,4 +47,4 @@ All six wheels are driven, using a simple chain setup. The center two wheels are
 
 ![Drive chains and wheels]({{ site.url }}/images/first/powertrain2.jpg)
 
-[emc]: "http://www.linuxcnc.org/"
+[emc]: http://www.linuxcnc.org/

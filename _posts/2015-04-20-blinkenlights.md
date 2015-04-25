@@ -40,18 +40,17 @@ The server-side software and Cortex-M0 firmware are on Github:
 
 Both are currently a huge mess. I'm working on cleaning them up a tad but for a quick project it isn't high on my to do list. The firmware relies heavily on NXP's provided library functions for IO manipulation. Setting up the peripherals was one of the more difficult parts. I realized pretty early on that if the ADC called an interrupt after every conversion, a ton of CPU time would be wasted just copying out ADC values. To get around this, I set up the DMA, triggered on an ADC conversion complete. It alternately fills two buffers with the ADC results. After a buffer is finished, the DMA signals an interrupt which tells the processor new data is available. The DMA controller is quite smart, and takes a big struct of addresses and configuration:
 
-```C
+```
 __attribute__ (aligned(16)) static DMA_CHDESC_T dmaDescA = {
-		.xfercfg = DMA_XFER_CONFIG,
-		.source = DMA_ADDR(&(LPC_ADC->DR[INPUT_ADC_CH])),
-		.dest = DMA_ADDR(&dmaBuffA[DMA_BUFFER_SIZE-1]),
-		.next = DMA_ADDR(&dmaDescB)
+	.xfercfg = DMA_XFER_CONFIG,
+	.source = DMA_ADDR(&(LPC_ADC->DR[INPUT_ADC_CH])),
+	.dest = DMA_ADDR(&dmaBuffA[DMA_BUFFER_SIZE-1]),
+	.next = DMA_ADDR(&dmaDescB)
 };
 ```
 
 The DMA will use the `.next` pointer to load another configuration, which will start the next transfer, then 'ping-pong' (using the `.next` pointer again) back to this one. With all this setup, the processor doesn't need to interfere at all, other than processing the notification that new data is available.
 
 
-[lpc_dev]: ""
-[lpc_xpresso]: ""
-[pdf_schematic]: ""
+[lpc_dev]: http://www.embeddedartists.com/products/lpcxpresso/lpc824_xpr.php
+[pdf_schematic]: {{ site.url }}/assets/lpc_led_controller.pdf

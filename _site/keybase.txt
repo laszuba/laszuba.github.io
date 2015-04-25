@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/laszuba
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://leeszuba.com
+  * I am laszuba (https://keybase.io/laszuba) on keybase.
+  * I have a public key with fingerprint 3E85 1515 F443 5778 7237  B874 2D51 1107 8011 A836
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "3e851515f44357787237b8742d5111078011a836",
+            "host": "keybase.io",
+            "key_id": "2d5111078011a836",
+            "kid": "0101167847e586dc5c7017ad61f0253dac965f042851c4acd935d55bee34a499486e0a",
+            "uid": "6582134a32066d3c4bfb796d6b64de19",
+            "username": "laszuba"
+        },
+        "service": {
+            "hostname": "leeszuba.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1426902838,
+    "expire_in": 157680000,
+    "prev": "c504b7681776dac1d26742478a257441bcedb4b6a3d677fdc07223b1991907c9",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
+Comment: GPGTools - https://gpgtools.org
+
+owFtUm1QVFUYXiTEFgXJkghKvSGjtNH9PvdijYISaRaBkdoE2733nN296u5ddpdV
+3EFjQkrtg8jSBSQmamZJYvg0jWlqhhXRRrAIJInIYUxbCTErMkM7l8l/nfPjzHne
+53nO+z5zKuaFG4xhj+bERr4SG+DDvv5FNuTN7VvlI2QNFhNpPmIrmjksqsOKXE6X
+6vAQaQSDBI7C28KyDAeAAGgGyAJgachRFEUCgaQoSWB4wkTYNLeuwDay5EapqoYx
+fDGrEKP/w986UyApjPBAYAHiBB4qnAJICkiQpywkzTFQUkSes5AsjftQWEmBIsNB
+jpMRYliJFUVW4BEpYbuiGTueE2gKVxia5HnIKKxskYHIQ17mWYgoUSe6kcsh2RFm
+b5PcO4tkiSgxERj0qgrSE9AHuUNAaIaRqmh2LHW6NI+maNtwxebxONN0oafYqTO3
+I9n8n4dZVh0Qp4gFXuRyq5qDSKMwU/GouinF0rxI0gIjmAi0w6m6kFnVGRzgBRIv
+/RnkxZYKR7IyBikAeJwDBWkeB88CQaI5wLKUrCAoszIvMZAHwAIVEtA0I1OiSIkk
+UPRZ3ajQoRFpDG5TsmJLt2p1SJ4iFyJKjIa9sxLvMoQZDbMjZuk/wWC8e/6d77Fo
+c8z0/cY+bW5jQk1fg9+WGX0yeLPu6IutFUP+3bHLjqdHfNLov3F1zr6L1yJPMTFJ
+Ex92V7Z32bN2V1ZZ/MaR9Q+bc1wg+6ETo0smr/4N4cFyX1XqgNIS+sDn4+tb2wcK
+NlDhyad7lvMji89mJV4+R66YZ4OpvqwfDGPPTP0W1boOHGp4ra52eOMfwaUfRbGX
+X+fkgr1jQ02l3qwHv/J9nLKqIECMLYUVSXI4rBptz8kNLbQd1uYvCNOeWp29WUjd
+/nRKV7/981DZp7sK/b3jyZtaz3RnvzoeItfVxxAT5oQLRdfbm2O/vHIk6kyGQt2e
+Mv2+JbjIOXrM9tJk6Qud40c8exT72y0rn0v4dqXJmtF2sjpZ/GxoLHjhgZJO+4nb
+ce682X+mPFt6vTAulrSr39+zOnfDT5FBY/mNtuknh3um+fSja5Z999ZUcdytwU6i
+o3bT4fP5DbfOcy+HBuPN1pbj+yeW+GrP+uPyQ9ScNfHmU1VNjR0Dh+JP7+lFawu/
+KRlbXHGxf2oyqSj8rzdGnqi2Jr5zs81b05w/XPyrqaC1snuwRcrbGD3UM/Q4qNmZ
+f6W5bi05HtFc32BrK/f0XhKEzF0jrsx/AkF47v37rlWveDfQX9f1vPdYR+abBxaW
+7WiO+pm+tK3pvdz06B/XB5L2dT623xZ4xG1eQJUJ925ZnvTF9IH0g03VkRn/Ag==
+=VK4Q
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/laszuba
+
+==================================================================
+
