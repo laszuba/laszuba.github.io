@@ -13,11 +13,11 @@ The end result is a module that detects sound, particularly the kick drum, and f
 
 ## Hardware
 
-I whipped up a little prototype board with: a microphone with an anti-alias filter; a programmable gain amplifier; and three MOSFETs with associated level shifting. Check out the [schematic][pdf_schematic] and the picture below:
+I whipped up a little prototype board with: a microphone with an anti-alias filter; a programmable gain amplifier; and three MOSFETs with associated level shifting. Check out the [schematic (pdf)][pdf_schematic] and the picture below:
 
 ![Prototype circuit]({{ site.url }}/images/blinkenlights/prototype_board.jpg)
 
-The first amplifier does a little bit of amplification and incorporates a simple 20dB/decade low pass anti-aliasing filter. The corner frequency is set at a relatively low 5kHz, because most of the 'interesting' content for LED control in music is below this frequency. It also drastically lowers the required sample rate, letting the ADC oversample more. This stage also sets the signal at the midpoint of the ADC's range.
+The first amplifier does a little bit of amplification and incorporates a simple 20dB/decade low pass anti-aliasing filter. The corner frequency is set at a relatively low 5kHz, because most of the 'interesting' content for LED control in music is below this frequency. It also drastically lowers the required sample rate, letting the ADC oversample more. The DC offset is added to set the signal at the midpoint of the ADC's range as well.
 
 The second amplification stage has programmable gain. This allows the microcontroller to adjust the ADC input level dynamically, making the best use of the available dynamic range. Inexpensive 2N7002 FETs are used to switch gain resistors in and out of the circuit. The available gains are:
 
@@ -28,7 +28,9 @@ The second amplification stage has programmable gain. This allows the microcontr
 |    0b10 |         528 |
 |    0b11 |         609 |
 
-Automatic gain control has not yet been implemented in software. For now it's operating at the lowest gain of 49, and seems to be working fine. After the gain stages, the signal goes directly into the internal ADC of the LPC824. A small series resistance is included to isolate the output of the amplifier from the ADC input.
+Capacitors C2 and C5 are used to set the DC gain of each op amp to 1, preventing the input offset errors from being amplified, particularly the offset of the first stage. This lets cheap amplifiers with poor offset characteristics do the job, taking advantage of the fact there is no interesting DC content in the audio signal.
+
+Automatic gain control has not yet been implemented in software. For now it's operating at the lowest gain of 49, and seems to be working fine. After the gain stages, the signal goes directly into the internal ADC of the LPC824. A small series resistance is included to isolate the output of the amplifier from the ADC input, which should help with stability (although that is hardly a problem in the first place, it doesn't hurt).
 
 ## Software
 
@@ -49,8 +51,12 @@ __attribute__ (aligned(16)) static DMA_CHDESC_T dmaDescA = {
 };
 ```
 
-The DMA will use the `.next` pointer to load another configuration, which will start the next transfer, then 'ping-pong' (using the `.next` pointer again) back to this one. With all this setup, the processor doesn't need to interfere at all, other than processing the notification that new data is available.
+The DMA will use the `.next` pointer to load another configuration, which will start the next transfer, then 'ping-pong' (using the `.next` pointer again) back to this one. With all this setup, the processor doesn't need to interfere at all, other than processing the notification that new data is available. 
 
 
 [lpc_dev]: http://www.embeddedartists.com/products/lpcxpresso/lpc824_xpr.php
+[touchosc]: 
 [pdf_schematic]: {{ site.url }}/assets/lpc_led_controller.pdf
+[github_server]:
+[github_client]:
+

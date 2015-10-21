@@ -5,7 +5,7 @@ title: About
 
 # {{ page.title }}
 
-I am a 3B Electrical Engineering student at the University of Waterloo.
+I am a 4B Electrical Engineering student at the University of Waterloo.
 
 My interests currently lie in radio frequency circuits, power electronics, and analog and mixed signal design. I enjoy working on all kinds of electronics projects in my spare time.
 
