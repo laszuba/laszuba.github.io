@@ -11,7 +11,7 @@ In my final year of high school, our school received the funding for a second FI
 
 At the competition we had a fantastic group of students that worked together incredibly well coordinating everything fixing problems as they came up. We performed very well, winning Highest Rookie Seed, eventually getting knocked out by the formidable Team 2056 in the semi-finals.
 
-Many of the parts of the robot were constructed on an old CNC machine I updated with [EMC][emc] and a new stepper drive system a few months prior.
+Many of the parts of the robot were constructed on an old CNC machine I updated with [EMC](http://www.linuxcnc.org/) and a new stepper drive system a few months prior.
 
 ![Overview 1]({{ site.url }}/images/first/full1.jpg)
 
@@ -46,5 +46,3 @@ The main drive uses two speed pneumatic transmissions (purchased than modified f
 All six wheels are driven, using a simple chain setup. The center two wheels are slightly lower, giving the robot a point to pivot on.
 
 ![Drive chains and wheels]({{ site.url }}/images/first/powertrain2.jpg)
-
-[emc]: http://www.linuxcnc.org/
