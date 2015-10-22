@@ -7,7 +7,9 @@ title: Reverse Engineering an RGB LED Controller
 
 On a recent trip to Shenzhen, China, I had the fantastic opportunity to visit the electronics market at Hua Qiang Bei. Among other things, it is perhaps the best place in the world to buy loads of cheap LEDs. My co-worker found several vendors selling RGB LED strips, with about 1 LED per 2 cm. The best part? They cost $1/m. The LEDs are wired in series/parallel, with 3 of the same colour in series with a current limiting resistor, than these groups of 3 in parallel with all others of the same colour. He also found controllers that have a little IR remote and the current capacity for 2 A, or 10 m of LEDs.
 
-The controllers are small and cheap, but they don't work particularly well. The remote has fairly limited colour options and doesn't work all the time. But before replacing the controller with my own electronics, I figured it would be fun to reverse engineer them.
+The controllers are small and cheap, but they don't work particularly well. The remote has fairly limited colour options and doesn't work all the time. But before replacing the controller with my own electronics, I figured it would be fun to reverse engineer them. Here is a disassembled controller:
+
+![LED Controller]({{ site.url }}/images/shenzhen_led_controller/controller1.jpg)
 
 ## Component Breakdown
 
