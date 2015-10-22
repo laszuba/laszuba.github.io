@@ -7,9 +7,9 @@ title: Software Defined Radio
 
 ## Introduction
 
-Lately I have been very interested in RF. I decided the perfect project to delve into radio was a software defined radio receiver (SDR), heavily inspired by Jeri Ellsworth's [videos][jeri_vids] on the topic.
+Lately I have been very interested in RF. I decided the perfect project to delve into radio was a software defined radio receiver (SDR), heavily inspired by Jeri Ellsworth's [videos](http://www.youtube.com/watch?v=vY9Hi1Jiadg) on the topic.
 
-From Jeri's videos, I discovered Gerald Youngblood's seminal [articles][qex] and used these as a reference during my development. I have been using [HDSDR][hdsdr] as a quick and easy way to demodulate input signals and display a spectrum waterfall. I have also been experimenting with [GNU Radio][gnuradio], eventually hoping to write drivers for my own custom hardware to run on the Raspberry Pi. The current FPGA code is available on [GitHub][gitsdr].
+From Jeri's videos, I discovered Gerald Youngblood's seminal [articles](http://www.flex-radio.com/Data/Doc/qex1.pdf) and used these as a reference during my development. I have been using [HDSDR](http://www.hdsdr.de/) as a quick and easy way to demodulate input signals and display a spectrum waterfall. I have also been experimenting with [GNU Radio](http://gnuradio.org/), eventually hoping to write drivers for my own custom hardware to run on the Raspberry Pi. The current FPGA code is available on [GitHub](https://github.com/laszuba/Pulsar_SDR).
 
 The end goal of the project is to integrate a 130 Msps ADC (LTC2208), FPGA (Altera Cyclone IV), and Raspberry Pi into an integrated radio receiver, running GNU radio. The FPGA will downsample the signal, create the waterfall display, and pipe the data to the Pi through 10/100 Ethernet. The Pi will present the pre-processed waterfall to the user, as well as demodulate a narrower band signal (probably around 2 MHz bandwidth). Keeping the demodulation in the Pi will allow huge amounts of flexibility, but will take a significant amount of processing power. The Pi cannot possibly be presented with the full 60 MHz baseband, so this is where the FPGA comes in. This is a fairly lofty goal, but I am very excited to work on it. I expect it to be quite ongoing.
 
@@ -52,11 +52,3 @@ It is built around a quadrature sampling mixer, using a 40XX analog switch, and 
 ### Problems and Improvements
 
 On this version, the tuning frequency was hard coded, so the FPGA needs to be re-flashed to change the tuning. This was obviously less than ideal. Unfortunately, the performance leaves to be desired as the noise performance of the op amp is very very poor. This version is just a proof of concept, to try and understand the hardware and how the sampling detector works. No real measurements were performed, as I did not have any of the required test equipment at the time. The hardware later failed, and I decided because of the poor performance it was not worth fixing. Work on an improved version began.
-
-
-
-[jeri_vids]: "http://www.youtube.com/watch?v=vY9Hi1Jiadg"
-[qex]: "http://www.flex-radio.com/Data/Doc/qex1.pdf"
-[hdsdr]: "http://www.hdsdr.de/"
-[gnuradio]: "http://gnuradio.org/"
-[gitsdr]: "https://github.com/laszuba/Pulsar_SDR"
