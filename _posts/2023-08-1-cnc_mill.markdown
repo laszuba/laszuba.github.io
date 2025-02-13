@@ -51,6 +51,8 @@ I built a CNC mill/router loosely based on the [https://wiki.printnc.info/](Prin
 
 {% include image.html url="/images/cnc/construction-wiring.jpeg" description="Wiring the control cabinet" %}
 
+{% include video.html url="/images/cnc/construction-first_moves.webm" description="First moves" %}
+
 {% include image.html url="/images/cnc/calibration-motion_accuracy.jpeg" description="Validating the commanded distance to the controller matches the actual distance" %}
 
 {% include image.html url="/images/cnc/mechanics-tool_setter.jpeg" description="Testing the automatic tool length probe" %}
