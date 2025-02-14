@@ -7,11 +7,13 @@ categories: machining mechanical
 
 # Abstract
 
-I built a CNC mill/router loosely based on the [https://wiki.printnc.info/](PrintNC Mini) project. I modified most of the critical motion components so they could be machined on my manual mill, instead of 3D printing parts to later be replaced with CNC machined ones. I also designed and built an enclosure including a full drain tub and a flood coolant system. The controller runs LinuxCNC with a Mesa Ethernet IO card.
+I built a CNC mill/router loosely based on the [PrintNC Mini](https://wiki.printnc.info/) project. I modified most of the critical motion components so they could be machined on my manual mill, instead of 3D printing parts to later be replaced with CNC machined ones. I also designed and built an enclosure including a full drain tub and a flood coolant system. The controller runs [LinuxCNC](https://linuxcnc.org/) with a Mesa Ethernet IO card.
 
 # Complete Machine
 
 {% include image.html url="/images/cnc/complete-machine_overview.jpeg" description="Overall machine in enclosure" %}
+
+{% include video.html url="/images/cnc/complete-machining_a_part.webm" description="Machining a part with coolant" %}
 
 {% include image.html url="/images/cnc/complete-machine_and_controller.jpeg" description="Controller and machine making a part" %}
 

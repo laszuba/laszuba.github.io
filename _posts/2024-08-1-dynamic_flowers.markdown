@@ -55,6 +55,8 @@ The motion is driven by 4 motors, each connected to 3 petals through universal j
 
 {% include image.html url="/images/dynamic_flowers/machining-u_joint-setup.jpeg" description="Final U-joint setup" %}
 
+{% include video.html url="/images/dynamic_flowers/machining-u_joint-cnc.webm" description="U-joint machining" %}
+
 {% include image.html url="/images/dynamic_flowers/machining-u_joint-coolant.jpeg" description="Hard to see under the coolant while the parts are running" %}
 
 {% include image.html url="/images/dynamic_flowers/machining-u_joint-complete.jpeg" description="After the CNC, waiting on deburring and manual operations to add the pivot holes" %}
